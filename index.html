@@ -581,10 +581,10 @@
   <script>
     /* =====================================================================
        ⚙️  EDIT THIS ONE LINE ONLY
-       Paste your ngrok https URL here (keep the /webhook/lead path).
+       Replace YOUR-N8N-HOST with your n8n (or ngrok) host; keep the /webhook/lead path.
        Example: const WEBHOOK_URL = "https://abc123.ngrok-free.app/webhook/lead";
        ===================================================================== */
-    const WEBHOOK_URL = "https://stopping-sacred-worry.ngrok-free.dev/webhook/lead";
+    const WEBHOOK_URL = "https://YOUR-N8N-HOST/webhook/lead";
     /* ===================================================================== */
 
     const form = document.getElementById('leadForm');
@@ -669,7 +669,7 @@
       submitBtn.textContent = 'Sending';
 
       try {
-        if (WEBHOOK_URL.startsWith('NGROK_URL_HERE')) {
+        if (WEBHOOK_URL.includes('YOUR-N8N-HOST')) {
           throw new Error('config'); // WEBHOOK_URL hasn't been set yet
         }
 
